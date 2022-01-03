@@ -1,0 +1,9 @@
+nav {
+  &.header {
+    .language {
+      &--en {
+        border-right: 1px solid black;
+      }
+    }
+  }
+}
