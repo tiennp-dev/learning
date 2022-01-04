@@ -26,7 +26,7 @@ import { HttpTokenInterceptor } from './interceptors/http-token.interceptor';
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
     if (parentModule) {
-      throw new Error(`${parentModule} has already been loaded. Import Core module in the AppModule only.`);
+      throw new Error(`Import Core module in the AppModule only.`);
     }
   }
 }

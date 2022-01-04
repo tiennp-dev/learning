@@ -11,9 +11,6 @@ import { LanguageCode } from 'src/app/shared/enum/language.enum';
 
 @Injectable()
 export class LanguageInterceptor implements HttpInterceptor {
-
-  constructor() { }
-
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const lang = localStorage.getItem(LocalStorageEnum.Language) || LanguageCode.en;
 

@@ -9,16 +9,13 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class HttpTokenInterceptor implements HttpInterceptor {
-
-  constructor() { }
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const headersConfig: any = {
+    const headersConfig: Record<string, string> = {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     };
 
-    const token = '';
-
+    const token = 'token';
     if (token) {
       headersConfig['Authorization'] = `Bearer ${token}`;
     }
