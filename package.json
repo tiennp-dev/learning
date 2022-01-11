@@ -1,6 +1,6 @@
 {
   "name": "welearning",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -21,6 +21,9 @@
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fullcalendar/angular": "^5.10.1",
+    "@fullcalendar/daygrid": "^5.10.1",
+    "@fullcalendar/interaction": "^5.10.1",
     "@ng-bootstrap/ng-bootstrap": "^12.0.0-beta.4",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",

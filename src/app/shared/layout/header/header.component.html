@@ -1,39 +1,61 @@
-<nav class="header navbar navbar-expand-lg navbar-light bg-light">
+<header class="header">
   <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="['/home']">WeLearning</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" [routerLink]="['/home']">Home</a>
-        </li>
-        <li class="nav-item d-flex align-items-center">
-          <select
-            class="form-select"
-            [(ngModel)]="currentLang"
-            (ngModelChange)="changeLang(currentLang)"
-          >
-            <ng-container *ngFor="let lang of languages">
-              <option
-                [value]="lang.code"
-                [selected]="currentLang === lang.code"
-              >
-                {{ lang.name | translate }}
-              </option>
-            </ng-container>
-          </select>
-        </li>
-      </ul>
+    <div class="row">
+      <div class="col-md-4 col-3">
+        <div class="header-left d-flex align-items-center">
+          <div class="menu-toggle-btn mr-20">
+            <button id="menu-toggle" class="main-btn primary-btn btn-hover">
+              <i class="lni lni-chevron-left me-0 me-md-2"></i> Menu
+            </button>
+          </div>
+          <div class="header-search d-none d-md-flex">
+            <form action="#">
+              <input type="text" placeholder="Search...">
+              <button><i class="lni lni-search-alt"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 col-9">
+        <div class="header-right">
+          <!-- profile start -->
+          <div class="profile-box ml-15">
+            <button
+              class="dropdown-toggle bg-transparent border-0"
+              type="button"
+              id="profile"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <div class="profile-info">
+                <div class="info">
+                  <h6>Super Idol</h6>
+                  <div class="image">
+                    <img src="assets/images/profile/profile-image.png" alt="" />
+                    <span class="status"></span>
+                  </div>
+                </div>
+              </div>
+              <i class="lni lni-chevron-down"></i>
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="profile"
+            >
+              <li>
+                <a href="#0"> <i class="lni lni-user"></i> View Profile </a>
+              </li>
+              <li>
+                <a href="#0"> <i class="lni lni-cog"></i> Settings </a>
+              </li>
+              <li>
+                <a href="#0"> <i class="lni lni-exit"></i> Sign Out </a>
+              </li>
+            </ul>
+          </div>
+          <!-- profile end -->
+        </div>
+      </div>
     </div>
   </div>
-</nav>
+</header>
